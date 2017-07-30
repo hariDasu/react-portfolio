@@ -5,7 +5,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
    config.vm.box = "phusion-open-ubuntu-14.04-amd64"
    config.vm.network :private_network, ip: "192.168.99.106"
-   config.vm.hostname = "dev.coo-e.com"
+   config.vm.hostname = "dev.dasu.io"
    config.vm.network "forwarded_port", guest: 9999, host: 9999
    config.vm.network "forwarded_port", guest:80, host:80
    config.vm.network "forwarded_port", guest:8080, host:8081
@@ -18,7 +18,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      override.vm.box_url = "https://oss-binaries.phusionpassenger.com/vagrant/boxes/latest/ubuntu-14.04-amd64-vbox.box"
        # max 66% CPU cap
      v.customize ["modifyvm", :id, "--cpuexecutioncap", "66"]
-     # give vm max 3GB ram
+     # give vm 8GB ram
      v.memory = 8200
      v.cpus = 2
    end
