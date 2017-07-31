@@ -4,21 +4,21 @@ import tellUsWhoImg  from './assets/images/matchScreen.PNG'
 
 const items = [
     {
-        image: './assets/images/profileSDR.jpg',
+        image: tellUsWhoImg,
         header: 'tellUsWho',
         description: 'Applying Scala functional programming concepts to generate a set of ' +
         'JSON matches for every user to take our survey',
         meta: 'Match Generation Algorithm',
     },
     {
-        image: '/assets/images/matchScreen.PNG',
+        image: tellUsWhoImg,
         header: 'nodeJS Distributed WebCrawler',
         description: 'Utlizing redis as a centralized job queue installed via AWS Elasticache,' +
         'able to spawn ec2 nodes and run multiple nodeJS worker instances to scour amazon to detect ' +
         'price discrepancies in books for trade-in value',
         meta: 'nodeJS/Redis/EC2',
     },
-    {    image: '/assets/images/matchScreen.PNG',
+    {    image: tellUsWhoImg,
         header: 'CrossFilter/DC.js',
         description: 'Interactive data visualizations with crossfilter and DC.js allowing users to dig deeper into diagnosing' +
         ' the issues behind long wait times in hospitals',
