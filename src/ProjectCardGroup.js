@@ -1,6 +1,11 @@
-import React from 'react'
+import React from 'react';
 import { Card,Container,Image } from 'semantic-ui-react'
-import tellUsWhoImg  from './assets/images/matchScreen.PNG'
+import tellUsWhoImg  from './assets/images/matchScreen.PNG';
+import { BrowserRouter as Router,
+    Route,
+    Link} from 'react-router-dom';
+import TellUsWho from './TellUsWho';
+
 
 const items = [
     {
@@ -9,6 +14,7 @@ const items = [
         description: 'Applying Scala functional programming concepts to generate a set of ' +
         'JSON matches for every user to take our survey',
         meta: 'Match Generation Algorithm',
+        href:'/projects/tellUsWho'
     },
     {
         image: tellUsWhoImg,
@@ -17,18 +23,24 @@ const items = [
         'able to spawn ec2 nodes and run multiple nodeJS worker instances to scour amazon to detect ' +
         'price discrepancies in books for trade-in value',
         meta: 'nodeJS/Redis/EC2',
+        href:'/projects/webCrawler',
     },
     {    image: tellUsWhoImg,
         header: 'CrossFilter/DC.js',
         description: 'Interactive data visualizations with crossfilter and DC.js allowing users to dig deeper into diagnosing' +
         ' the issues behind long wait times in hospitals',
         meta: 'Data Visualization',
+        href:'/projects/dataViz',
+
     },
 ]
 
-const ProjectCardGroup = () => (
+
+const ProjectCardGroup = ({routes}) => (
     <Container text style={{ marginTop: '7em' }}>
-    <Card.Group items={items}/>
+
+    <Card.Group items={items} as={Link} to={()=>(items.pop().href)} />
+        {/**/}
         {/*<Card>*/}
         {/*<Card.Content>*/}
             {/*<Image  size='medium' src={tellUsWhoImg} />*/}
@@ -61,7 +73,17 @@ const ProjectCardGroup = () => (
             {/*</Card.Content>*/}
         {/*</Card>*/}
     {/*</Card.Group>*/}
+        {routes.map((route, i) => (
+            <RouteWithSubRoutes key={i} {...route}/>
+        ))}
     </Container>
+)
+
+const RouteWithSubRoutes = (route) => (
+    <Route path={route.path} render={props => (
+        // pass the sub-routes down to keep nesting
+        <route.component {...props} routes={route.routes}/>
+    )}/>
 )
 
 export default ProjectCardGroup

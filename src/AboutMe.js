@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {Container,Header,Image} from 'semantic-ui-react';
 import headShot from './assets/images/profile-sdr.JPG'
 
