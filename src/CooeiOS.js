@@ -19,30 +19,26 @@ const CooeiOS = () => (
                 src={cooeConvo}
                 centered
             /><p></p>
-            <p>tellUsWho is a social network survey tool that creates profiles for students, rich in data on their
-                background, school, and work information, as well as their favorite interests and activities.
-
-                <a href="./assets/pdfs/Mayer_CHI2015_MakingSocialMatchingContext-Aware.pdf"> Prior research</a> conducted
-                by Dr. Julia Mayer informs us of the novel concept of
-                <em> contextual rarity</em>: ": the rarer a shared user attribute
-                is in the current context, the more interested the user is in
-                meeting another person who shares this contextually rare
-                attribute" (Mayer, J.M. et. al).
+            <p>Coo-e is a group decision making mobile application. It allows users to be able to create suggestions
+                directly within a messaging interface, and facilitate decision making through voting upon these suggestions. My role
+                in this project was to architect a scalable backend that could support many users chatting simultaneously, and developing the native
+                iOS application.
                 <List bulleted>
                     <List.Item>
                         <b>Technologies Used</b>
                         <List.List>
-                            <List.Item >Primary Language:<a href="http://scala-lang.org/"> Scala</a></List.Item>
-                            <List.Item>Web Framework:<a href="https://www.playframework.com/"> Play! Framework</a></List.Item>
-                            <List.Item>Database: <a href="https://www.postgresql.org/">PostgreSQL</a></List.Item>
-                            <List.Item>Deployment Tools:  <a href="https://www.docker.com/what-docker">Docker</a></List.Item>
-                            <List.Item>API Documentation:  <a href="https://swagger.io/">Swagger</a></List.Item>
+                            <List.Item>Web Framework:<a href="https://www.playframework.com/">ExpressJS</a></List.Item>
+                            <List.Item>Database: <a href="https://www.postgresql.org/">RethinkDB</a></List.Item>
+                            <List.Item>Caching: <a href="https://www.postgresql.org/">Redis</a></List.Item>
+                            <List.Item>Messaging Backend:  <a href="https://swagger.io/">MongooseIM</a></List.Item>
+                            <List.Item>Deployment Tools:  <a href="https://www.docker.com/what-docker">Docker/Docker Cloud</a></List.Item>
+                            <List.Item>API Documentation:  <a href="https://swagger.io/">Apiary.io</a></List.Item>
                         </List.List>
                     </List.Item>
                 </List>
 
 
-                <Header as="h2">Backend & Front-End Web Development/Deployment</Header>
+                <Header as="h2">Architectural Decisions</Header>
                 I learned Scala and the Play! Framework and interfaced with our PostgreSQL database using Anorm for this project.
                 I integrated <b>OAuth2 login with Google</b> so that NJIT students could log in via their NJIT WebMail accounts, which are GMail WebMail accounts.
                 The most difficult part in developing this application was the learning curve of Scala: I had come across
