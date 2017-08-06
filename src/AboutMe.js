@@ -11,9 +11,10 @@ const AboutMe = () =>
             centered
         />
         <p></p>
-        <p>Driven individual with ability to learn rapidly and implement solutions to difficult problems as proven in prior work experience.
-            Vast array of skills across the full stack enables me to work well and communicate with all types of team members ranging from UX/UI
-            designers to QA Testers as well as Mobile and Backend developers.</p>
+        <p>This website explains what I consider to be my best work. The projects section contains
+            the different applications I have either completely invidividually, or as a member of a team. This website
+            itself has been created using react.js and react-router and showcases my ability to treat every task I have as an opportunity
+            to learn something new and exciting.</p>
     </Container>
 
 export default AboutMe
