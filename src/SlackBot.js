@@ -48,7 +48,7 @@ const SlackBot = () => (
                 had to be able to discern and parse actions and entities from text and convert the question into a potential function call
                 that could be sent over the REST API to retrieve the results the user desired.
 
-            </p>
+            </p><br/><br/>
             <p>
                 <Header as="h2">Development</Header>
                 I used <a href="http://blog.templeton.host/self-training-nlp-enabled-slack-bot-tutorial/">
@@ -59,14 +59,40 @@ const SlackBot = () => (
                 Natural Library </a>
                 as Andrew Templeton demonstrated to hard code cases where questions related to sessions, learning paths, or personal
                 events could be easily distinguished. I found that parsing the code beyond this to extract further data was not easily conducted
-                with this library, however, because it did not port over all the functionality that Python's NLTK library contained. async
+                with this library, however, because it did not port over all the functionality that Python's NLTK library contained.
 
-            </p>
+                <p><br/>
+                    I wrote <a href="https://github.com/hariDasu/nlp-slack-bot/blob/master/src/nltk-middleware.js">
+                    middleware to parse</a> the message that a user sends to my bot, and using some functional compostion a la <a href="http://ramdajs.com/">
+                    Ramda.js</a>, I am able to make a <a href="https://github.com/hariDasu/nlp-slack-bot/blob/master/src/nltk-middleware.js#L21"> method call to my Python Code </a>
+                    over XMLRPC. The original bottie code would call different funcitons within the middleware file itself, but insetad I have several function defintions
+                    which use the 'skill' that is returned from the Logistic regression classifier in Natural and called as a function in my <a href="https://github.com/hariDasu/nltk-python/blob/master/nltkServer.py">
+                    python NLTK file</a>.
+                    My <a href="https://github.com/hariDasu/nltk-python">nltk-python github repository</a> is created as a submodule within my slackbot github source code.
 
-            <p>
+                </p>
+
                 <Header as="h2">Deployment</Header>
+                This project was on <a href="https://cloud.google.com/"> Google Cloud</a> and was Dockerized. In order to manage
+                container orchestration, I had to learn kubernetes. Kubernetes allowed me to view the logs directly fro the browser, as
+                well as have the ability to scale up either container as I needed. I find docker-cloud and docker-compose to be easier to use,
+                but Kubernetes is supposed to be a better solution for large scale container management and orchestration, so I am glad I was able
+                to spend time to learn and use Kubernetes in this project.
 
-
+                <Header as="h2">Final Thoughts</Header>
+                <p>
+                If I was able to rewrite this project today, I woudl use some of the newer tools I have come across that weren't
+                    available to me at the time when I created this projet. <a href="https://api.ai/"> API.AI</a> is a great service that
+                    detects parts of speech such as actions, entities, and intents and allows developers to focus more on designing the conversational
+                    experiences at a higher level. This layer of abstraction could have enabled me to develop my application quicker, and potentially
+                    deliver a more uniform experience to users. In <a href="https://github.com/hariDasu/lbcbot"> another project I worked on</a>,
+                    I used <a href="https://claudiajs.com/claudia-bot-builder.html"> claudiaJS bot builder</a>
+                    and found it work great at allowing me to write bot code, and having it deploy the bot
+                    to  AWS Lambda, and interface easily with many different messaging platforms, rather than just slack. In scenarios where the
+                    bot doesn't require usage of platform specific components (such as <a href="https://api.slack.com/interactive-messages">
+                    Slack's interactive message API</a>), claudiaJS can allow me as a developer to create a bot application that is easily able
+                    interfaced with many different messaging platforms. <br/><br/>
+                    </p>
             </p>
 
         </Container>
