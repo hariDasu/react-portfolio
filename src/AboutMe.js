@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container,Header,Image} from 'semantic-ui-react';
-import headShot from './assets/images/profile-sdr.jpg'
+import headShot from './assets/images/profile-img.jpg'
 
 const AboutMe = () =>
     <Container text style={{ marginTop: '7em' }}>
