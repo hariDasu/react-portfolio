@@ -9,12 +9,15 @@ import {
 //Components
 import AboutMe from './AboutMe';
 import TellUsWho from "./TellUsWho";
+import CooeiOS from "./CooeiOS";
+import WebCrawler from "./WebCrawler";
+import SlackBot from "./SlackBot"
 //images
 import tellUsWhoImg  from './assets/images/matchScreen.PNG';
 import slackBot from './assets/images/slackBot.png';
 import webCrawlerStack from './assets/images/webCrawlerStack.png';
 import avatar from './assets/images/avatar.jpg';
-import dcJS from './assets/images/dcJS.png';
+import convoSnapshot from './assets/images/convo-snapshot.png';
 
 
 
@@ -55,7 +58,9 @@ const SemanticNavBar = () =>
             <Route exact path="/" component={AboutMe}/>
             <Route exact path="/projects" component={ProjectCardGroup}/>
             <Route path="/projects/tellUsWho" component={TellUsWho}/>
-            <Route path="/projects/webCrawler" component={TellUsWho}/>
+            <Route path="/projects/webCrawler" component={WebCrawler}/>
+            <Route path="/projects/cooe" component={CooeiOS}/>
+            <Route path="/projects/slackBot" component={SlackBot}/>
         </div>
     </Router>
 
@@ -68,32 +73,31 @@ const items = [
         header: 'tellUsWho',
         description: 'Applying Scala functional programming concepts to generate a set of ' +
         'JSON matches for every user to take our survey',
-        meta: 'Match Generation Algorithm',
+        meta: 'Scala/Play! Framework',
         href:'/projects/tellUsWho'
     },
     {
         image: webCrawlerStack,
         header: 'nodeJS Distributed WebCrawler',
-        description: 'Utlizing redis as a centralized job queue installed via AWS Elasticache,' +
-        'able to spawn ec2 nodes and run multiple nodeJS worker instances to scour amazon to detect ' +
-        'price discrepancies in books for trade-in value',
+        description: 'Crawler for books on Amazon to detect ' +
+        'price discrepancies in books versus trade-in value resulting in profit',
         meta: 'nodeJS/Redis/EC2',
-        href:'/webCrawler',
+        href:'projects/webCrawler',
     },
-    {    image: dcJS,
-        header: 'CrossFilter/DC.js',
-        description: 'Interactive data visualizations with crossfilter and DC.js allowing users to dig deeper into diagnosing' +
-        ' the issues behind long wait times in hospitals',
-        meta: 'Data Visualization',
-        href:'/dataViz',
+    {    image: convoSnapshot,
+        header: 'Group Coordination Application',
+        description: 'native iOS10/Swift 3 Application created using Material Swift Components to help ' +
+        'groups coordinate activities amongst each other',
+        meta: 'System Architecture, iOS/Swift 3',
+        href:'projects/cooe',
 
     },
     {    image:slackBot,
         header: 'ML/NLP Slackbot ',
         description: 'A machine learning powered slackbot with natural processing fueled by the '+
             'NLTK3 python library',
-        meta: 'NLP ChatBot',
-        href:'/slackBot',
+        meta: 'nodeJS Botkit/Python NLTK3',
+        href:'projects/slackBot',
 
     },
 ]
