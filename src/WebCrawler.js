@@ -4,7 +4,7 @@
 //Libraries
 import React from 'react';
 import {Container,Image,Header,List } from 'semantic-ui-react';
-import Highlight from 'react-highlight';
+
 //Images
 import webCrawlerStack  from './assets/images/webCrawlerStack.png';
 import tradeInValue from './assets/images/tradeInPrice.png';

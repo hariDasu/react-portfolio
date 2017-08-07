@@ -7,7 +7,7 @@
 //Libraries
 import React from 'react';
 import {Container,Image,Header,List } from 'semantic-ui-react';
-import Highlight from 'react-highlight';
+
 //Images
 import slackBot from './assets/images/slackBot.png';
 const SlackBot = () => (

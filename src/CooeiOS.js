@@ -4,7 +4,7 @@
 //Libraries
 import React from 'react';
 import {Container,Image,Header,List } from 'semantic-ui-react';
-import Highlight from 'react-highlight';
+
 //Images
 import cooeConvo  from './assets/images/cooe-convo.png';
 import myTeeupsHIG from './assets/images/myTeeups-HIG.png';
