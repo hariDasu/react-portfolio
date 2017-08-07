@@ -143,7 +143,7 @@ const TellUsWho = () => (
 
                 The most difficult part in developing this application was the learning curve of Scala. I had come across
                 some components of functional programming through node.JS/JavaScript, but the documentation was much clearer and thoroughly
-                explained as compared to Scala. I In spite of it, I was able to gain enough mastery and I implemented Futures, Promises, attempted using async/await methods.
+                explained as compared to Scala. In spite of this, I was able to gain enough mastery and I implemented Futures, Promises, attempted using async/await methods.
                 I learned a lot about Collection classes and using functions to transform data such as flatten, map, flatMaps etc. I had reused logic that I
                 had used in python in the past and utilized <a href="https://gitlab.com/coo-e/tellUsWho-Scala-Server/blob/prodPreDecember/app/controllers/MatchDataController.scala#L181">
                 dictionaries (Or Maps as they are called in Scala)
