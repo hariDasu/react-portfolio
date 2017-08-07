@@ -12,7 +12,7 @@ const AboutMe = () =>
         />
         <p></p>
         <p>This website explains what I consider to be my best work. The projects section contains
-            the different applications I have either completely invidividually, or as a member of a team. This website
+            the different applications I have completed either invidividually, or as a member of a team. This website
             itself has been created using react.js and react-router and showcases my ability to treat every task I have as an opportunity
             to learn something new and exciting.</p>
     </Container>
