@@ -40,7 +40,7 @@ const SemanticNavBar = () =>
             <Menu.Menu position='right'>
 
                 <Menu.Item className='item'>
-                    <a href="https://www.linkedin.com/in/srihari-rao-95902048/">
+                    <a href="https://www.linkedin.com/in/srihari-dasu-rao/">
                     <Button circular color='linkedin' icon='linkedin' /></a>
                 </Menu.Item>
 
