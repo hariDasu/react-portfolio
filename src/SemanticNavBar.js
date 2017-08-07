@@ -40,17 +40,16 @@ const SemanticNavBar = () =>
             <Menu.Menu position='right'>
 
                 <Menu.Item className='item'>
-                    <Button circular color='linkedin' icon='linkedin' />
+                    <a href="https://www.linkedin.com/in/srihari-rao-95902048/">
+                    <Button circular color='linkedin' icon='linkedin' /></a>
                 </Menu.Item>
+
                 <Menu.Item className='item'>
-                    <Button circular color='grey' icon='github' />
+                    <a href="https://stackoverflow.com/users/2158884/kinghenry14">
+                    <Button circular color='teal' icon='stack overflow' /></a>
                 </Menu.Item>
-                <Menu.Item className='item'>
-                    <Button circular color='teal' icon='stack overflow' />
-                </Menu.Item>
-                <Menu.Item className='item'>
-                    <Button circular color='blue' icon='skype' />
-                </Menu.Item>
+
+
             </Menu.Menu>
 
         </Container>
