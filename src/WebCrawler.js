@@ -20,13 +20,13 @@ const WebCrawler = () => (
                 centered
             /><p></p>
             <p>I spent a considerable amount of my time while working on my BS and MS at NJIT
-                doing contract work I found on <a href="https://www.upwork.com">Upwork, formerly known as
+                doing contract work I found on <a target="_blank" href="https://www.upwork.com">Upwork, formerly known as
                     ODesk</a>.
                 My entry level work was limited to alot of <b>Manual and automated QA Testing </b>, but this helped to
                 accumulate many hours of work which made my profile on Upwork stronger. After a while I branched out into more challenging
                 opportunities. This was my first real project that I found on my own on Upwork.<br/><br/>
 
-                <a href="https://gitlab.com/yolo/nodecrawlin/tree/amazonCrawlin">
+                <a target="_blank" href="https://gitlab.com/yolo/nodecrawlin/tree/amazonCrawlin">
                     My source code can be found here</a>
 
 
@@ -108,7 +108,7 @@ const WebCrawler = () => (
                 <p>
                The client had given me access to his AWS EC2 management console. I was familar with deploying VPS Instances on AWS
                 and was able to use the instances to create my workers and manager instances. I had opted to use Redis and the
-                <a href="https://automattic.github.io/kue/">&nbsp;Kue library</a> installed in AWS elasticache as a centralized job queue.
+                <a target="_blank" href="https://automattic.github.io/kue/">&nbsp;Kue library</a> installed in AWS elasticache as a centralized job queue.
                 I opted to use redis over other job queues such as RabbitMQ (Celery) because it had a simple and easy to understand API
                 and did not have too many excess features and was lightweight and easy to setup. Elasticache enabled me to have
                 my redis instance available to all EC2 nodes in my VPC (Virtual Private Cloud).</p>
@@ -120,24 +120,24 @@ const WebCrawler = () => (
 
 
                 <Header as="h2">The Output</Header>
-                The input file followed <a href="https://gitlab.com/yolo/nodecrawlin/blob/amazonCrawlin/keywords.txt">
+                The input file followed <a target="_blank" href="https://gitlab.com/yolo/nodecrawlin/blob/amazonCrawlin/keywords.txt">
                     this same format</a>. The keywords were processed as command line arguments (argv) and through the
-                node file module (fs). <a href="https://gitlab.com/yolo/nodecrawlin/blob/amazonCrawlin/priceCompManager.js">
+                node file module (fs). <a target="_blank" href="https://gitlab.com/yolo/nodecrawlin/blob/amazonCrawlin/priceCompManager.js">
                     The Manager file</a> followed the same logic as described in the outline pseudocode above.
-                <a href="https://gitlab.com/yolo/nodecrawlin/blob/amazonCrawlin/priceCompWorker.js">
+                <a target="_blank" href="https://gitlab.com/yolo/nodecrawlin/blob/amazonCrawlin/priceCompWorker.js">
                 The worker file</a>  follows the respective pseudocode outline above, and used cheerio to scrape the DOM to find the approriate
                 link(s) to crawl, or values to return.
-                The manager file contained a reference count to the total number of jobs, <a href="https://gitlab.com/yolo/nodecrawlin/blob/amazonCrawlin/priceCompManager.js#L68">
-                    and when completed</a>, returned a pretty printed <a href="https://gitlab.com/yolo/nodecrawlin/blob/amazonCrawlin/priceCompare.txt">
+                The manager file contained a reference count to the total number of jobs, <a target="_blank" href="https://gitlab.com/yolo/nodecrawlin/blob/amazonCrawlin/priceCompManager.js#L68">
+                    and when completed</a>, returned a pretty printed <a target="_blank" href="https://gitlab.com/yolo/nodecrawlin/blob/amazonCrawlin/priceCompare.txt">
                     JSON struture returned in a .txt file</a>.
-                The <a href="https://gitlab.com/yolo/nodecrawlin/blob/amazonCrawlin/showResults.py">Python script &nbsp;</a>
+                The <a target="_blank" href="https://gitlab.com/yolo/nodecrawlin/blob/amazonCrawlin/showResults.py">Python script &nbsp;</a>
                 processed these results and conducted the appropriate calculations desired by the client to reduce the final set to
                 only the desired records where profit was above a specified level (in this demo, $3). The final results were&nbsp;
-                <a href="https://gitlab.com/yolo/nodecrawlin/blob/amazonCrawlin/final.csv">
+                <a target="_blank" href="https://gitlab.com/yolo/nodecrawlin/blob/amazonCrawlin/final.csv">
                 printed out into a .CSV file.</a>
                 </p>
         </Container>
     </Container>
 )
 
-export default WebCrawler
+export default WebCrawler;

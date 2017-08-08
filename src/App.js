@@ -1,19 +1,11 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import FixedMenuLayout from './FixedMenuLayout.js'
+import FixedMenuLayout from './FixedMenuLayout.js';
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-
-          <FixedMenuLayout>
-
-          </FixedMenuLayout>
-
-      </div>
-    );
+    return <FixedMenuLayout className="App" />
   }
 }
 
